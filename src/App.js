@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import ProfileCard from "./components/ProfileCard";
+import Feed from "./components/Feed"
+import Card from "./components/Card"
+
+import './styles/app.scss'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ProfileCard />
+      
+      <div className="posts-list">
+        <Feed />
+      </div>
+    
+      <div className="asides">
+        <Card 
+          title="Aniversariantes"
+          iconUrl="https://img.icons8.com/office/16/000000/birthday.png"
+          content="Nenhum dos seus amigos faz aniversário hoje"
+          />
+        <Card 
+          title="Pendências"
+          iconUrl="https://img.icons8.com/office/16/000000/hourglass--v1.png"
+          additionalText={new Date().toDateString()}
+          content="Você não possui nenhuma pendência para hoje"
+        />
+      </div>
     </div>
   );
 }
