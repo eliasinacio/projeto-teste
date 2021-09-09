@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import '../styles/post.scss'
+import { Container } from './styles';
 
-const Post = (props) => {
+const Post = (props: any) => {
   const [isLiked, setIsLiked] = useState(props.isLiked);
 
   const handleLikePost = () => {
     setIsLiked(!isLiked);
   }
 
-  const isPrivate = (privacy) => {
+  const isPrivate = (privacy: any) => {
     if (privacy) {
       return (
         <>
@@ -27,7 +27,7 @@ const Post = (props) => {
   }
 
   return (
-    <div className="post-container">
+    <Container>
       <header>
         <div className="icon">
           <img src={props.imgUrl} alt="User Profile" />
@@ -91,7 +91,7 @@ const Post = (props) => {
           </button>
         </div>
       </footer>
-    </div>
+    </Container>
   )
 }
 

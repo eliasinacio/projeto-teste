@@ -1,8 +1,8 @@
-import '../styles/profile-card.scss'
+import { Container } from './styles';
 
 const ProfileCard = () => {
   return (
-    <div className="profile-card">
+    <Container>
       <div id="bg1">
         <div id="profile-data">
 
@@ -36,7 +36,7 @@ const ProfileCard = () => {
           </footer>
         </div>
       </div>
-    </div>
+    </Container>
   )
 }
 
