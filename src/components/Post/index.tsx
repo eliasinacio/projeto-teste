@@ -1,7 +1,23 @@
 import { useState } from 'react';
 import { Container } from './styles';
 
-const Post = (props: any) => {
+interface Props {
+  key: number,
+  isLiked: boolean | any,
+  imgUrl: string,
+  author: string,
+  publication: {
+    number: number, 
+    time: string
+  },
+  isPrivate: boolean,
+  body: string,
+  likes: number,
+  comments: number,
+  shares: number
+}
+
+const Post = (props: Props) => {
   const [isLiked, setIsLiked] = useState(props.isLiked);
 
   const handleLikePost = () => {

@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 
-interface CardProps extends HTMLDivElement {
+interface CardProps {
   iconUrl: string,
   title: string,
   additionalText?: string,
