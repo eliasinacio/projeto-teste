@@ -1,11 +1,18 @@
-import '../styles/card.scss'
+import { Container } from "./styles";
 
-const Card = (props) => {
+interface CardProps {
+  iconUrl: string,
+  title: string,
+  additionalText?: string,
+  content: string
+}
+
+const Card = (props: CardProps) => {
   return (
-    <div className="card">
+    <Container>
       <header>
         <img src={props.iconUrl} alt="icon"/>
-        <h3>{props.title}</h3>
+        <h3>{props.title}</h3> 
       </header>
 
       <span className="horizontal-line">
@@ -13,7 +20,7 @@ const Card = (props) => {
       </span>
       
       <p className="content">{props.content}</p>
-    </div>
+    </Container>
   )
 }
 

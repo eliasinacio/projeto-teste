@@ -1,4 +1,4 @@
-import Post from "./Post";
+import Post from "../Post";
 
 // Como são apenas dois posts deixei esses dados aqui mesmo
 

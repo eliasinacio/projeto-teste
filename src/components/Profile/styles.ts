@@ -1,4 +1,6 @@
-.profile-card {
+import styled from 'styled-components';
+
+export const Container = styled.div`
   min-width: 360px;
   height: 560px;
 
@@ -23,66 +25,60 @@
       border-radius: 50%;
     }
   }
-}
 
-#profile-data {
-  padding-top: 60px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-
-  #name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2C5E90;
-    margin-bottom: 5px;
-  }
-
-  #username {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #2a4e72;
-    margin-bottom: 5px;
-  }
-
-  #job {
-    color: #232323;
-  }
-
-  footer {
-    position: absolute;
-    bottom: 0;
-    
-    padding: 40px 0;
+  #profile-data {
+    padding-top: 60px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    text-align: center;
 
-    div {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      text-align: left;
-      gap: 40px;
+    #name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2C5E90;
+      margin-bottom: 5px;
     }
 
-    #location, #office, #university {
+    #username {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #2a4e72;
+      margin-bottom: 5px;
+    }
+
+    #job {
+      color: #232323;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      
+      padding: 40px 0;
+
       display: flex;
-      align-items: flex-end;
-      gap: 5px;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+        gap: 40px;
+      }
+
+      #location, #office, #university {
+        display: flex;
+        align-items: flex-end;
+        gap: 5px;
+      }
     }
   }
-}
-
-
-
-/* background styles */
-
-.profile-card {
+  
   position: relative;
 
   #bg1 {
@@ -127,4 +123,4 @@
       border-right: 330px solid #FFF;
     }
   }
-}
+`;

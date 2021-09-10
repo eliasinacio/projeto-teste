@@ -1,12 +1,14 @@
-import ProfileCard from "./components/ProfileCard";
+import ProfileCard from "./components/Profile"
 import Feed from "./components/Feed"
 import Card from "./components/Card"
 
-import './styles/app.scss'
+import { GlobalStyle } from "./styles/GlobalStyle";
+import { Container } from "./styles";
 
 function App() {
   return (
-    <div className="App">
+    <Container className="App">
+      <GlobalStyle />
       <ProfileCard />
       
       <div className="posts-list">
@@ -26,7 +28,7 @@ function App() {
           content="Você não possui nenhuma pendência para hoje"
         />
       </div>
-    </div>
+    </Container>
   );
 }
 

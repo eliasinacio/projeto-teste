@@ -1,4 +1,6 @@
-.App {
+import styled from 'styled-components';
+
+export const Container = styled.div`
   width: 100%;
   height: 100%;
 
@@ -15,7 +17,7 @@
     justify-content: center;
     flex-wrap: wrap;
 
-    .asides { order: 1;}
+    .asides { order: 1; }
 
     .posts-list { max-width: 600px; }
   }
@@ -33,23 +35,23 @@
       max-width: 600px; 
     }
   }
-}
 
-.posts-list {
-  order: 2;
-  width: 100%;
-  min-width: 400px;
-  max-width: 800px;
-  height: 400px;
-  
-  @media (max-width: 800px) {
-    margin-bottom: 80px;
+  .posts-list {
+    order: 2;
+    width: 100%;
+    min-width: 400px;
+    max-width: 800px;
+    height: 400px;
+    
+    @media (max-width: 800px) {
+      margin-bottom: 80px;
+    }
   }
-}
 
-.asides {
-  order: 3;
-  height: 400px;
-  min-width: 400px;
-}
+  .asides {
+    order: 3;
+    height: 400px;
+    min-width: 400px;
+  } 
+`;
 
